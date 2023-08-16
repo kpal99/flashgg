@@ -122,7 +122,7 @@ class MicroAODCustomize(object):
                 self.customizeGGH(process)
             elif "vbf" in customize.datasetName.lower():
                 self.customizeVBF(process)
-            elif "thq" in customize.datasetName.lower() or "thw" in customize.datasetName.lower():
+            elif "thq" in customize.datasetName.lower() or "thw" in customize.datasetName.lower() or "tprimebtoth" in customize.datasetName.lower():
                 self.customizeTH(process)
             elif "hh" in customize.datasetName.lower():
                 self.customizeHH(process)
