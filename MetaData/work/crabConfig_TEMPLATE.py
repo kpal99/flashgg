@@ -29,7 +29,8 @@ config.JobType.sendExternalFolder = True
 
 config.section_("Data")
 config.Data.inputDataset = "DATASET"
-config.Data.inputDBS = 'global'
+#config.Data.inputDBS = 'global'
+config.Data.inputDBS = 'phys03'
 config.Data.splitting = "SPLITTING"
 config.Data.unitsPerJob = UNITSPERJOB
 config.Data.publication = True
