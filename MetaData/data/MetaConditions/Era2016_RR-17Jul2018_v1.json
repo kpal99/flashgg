@@ -123,6 +123,16 @@
                            "RelativeSample2016"
                           ]
     },
+    "flashggTHQLeptonicTag" :
+    {
+        "btagDeepCSV" : [ 0.2217, 0.6321, 0.8953 ],
+        "jetID" : "Loose"
+    },
+    "flashggTHQHadronicTag" :
+    {
+        "btagDeepCSV" : [ 0.2217, 0.6321, 0.8953 ],
+        "jetID" : "Loose"
+    },
     "flashggVBFMVA" : 
     {  
         "weightFile" : "flashgg/Taggers/data/STXSmodels/vbfDataDriven_IncUL2017.xml",

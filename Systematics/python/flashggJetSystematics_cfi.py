@@ -200,7 +200,8 @@ class jetSystematicsCustomize:
                                         isNewCSVFormat = cms.bool(self.metaConditions['bTagSystematics']['isNewCSVFormat']),
                                         bDiscriminator = cms.double(self.metaConditions['bTagSystematics']['bDiscriminatorValue_'+ str(bTagger)]),
                                         Debug = cms.untracked.bool(False),
-                                        ApplyCentralValue = cms.bool(True)
+                                        #ApplyCentralValue = cms.bool(True)
+                                        ApplyCentralValue = cms.bool(False)
                                      ),
                               cms.PSet( MethodName = cms.string("FlashggJetBTagReshapeWeight"),
                                         Label = cms.string("JetBTagReshapeWeight"),

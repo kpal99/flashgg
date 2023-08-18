@@ -126,6 +126,18 @@
                           ]
     },
 
+    "flashggTHQLeptonicTag" :
+    {
+        "btagDeepCSV" : [ 0.1208, 0.4168, 0.7665 ],
+        "jetID" : "UL1718"
+    },
+
+    "flashggTHQHadronicTag" :
+    {
+        "btagDeepCSV" : [ 0.1208, 0.4168, 0.7665 ],
+        "jetID" : "UL1718"
+    },
+
     "flashggVBFMVA" :
     {
         "weightFile" : "flashgg/Taggers/data/STXSmodels/dijetDataDrivenMerged.xml",
@@ -138,8 +150,8 @@
         "jetID" : "Tight2018"
     },
 
-    "flashggGluGluHMVA" : 
-    {  
+    "flashggGluGluHMVA" :
+    {
         "weightFile" : "flashgg/Taggers/data/STXSmodels/nClassesGGHModel.xml",
         "jetID" : "Tight2018"
     },
@@ -220,17 +232,13 @@
 
 	"bTagEffBins" : "bTagEffBins2017",
 
-	"bTagger" : "pfDeepJet",
+	"bTagger" : "pfDeepCSV",
 
     "isNewCSVFormat" : true,
 
 	"bDiscriminatorValue_pfDeepCSV" : 0.4168,
 	"bTagCalibrationFile_Reshape_pfDeepCSV" : "flashgg/Systematics/data/reshaping_deepCSV_106XUL18_v2.csv",
 	"bTagCalibrationFile_WPCut_pfDeepCSV" : "flashgg/Systematics/data/wp_deepCSV_106XUL18_v2.csv",
-
-	"bDiscriminatorValue_pfDeepJet" : 0.2783,
-	"bTagCalibrationFile_Reshape_pfDeepJet" : "flashgg/Systematics/data/reshaping_deepJet_106XUL18_v2.csv",
-	"bTagCalibrationFile_WPCut_pfDeepJet" : "flashgg/Systematics/data/wp_deepJet_106XUL18_v2.csv",
 
 	"eta" : 2.5
     },

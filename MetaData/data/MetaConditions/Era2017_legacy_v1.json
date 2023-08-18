@@ -133,6 +133,18 @@
                           ]
     },
 
+    "flashggTHQLeptonicTag" :
+    {
+        "btagDeepCSV" : [ 0.1355, 0.4506, 0.7738 ],
+        "jetID" : "UL1718"
+    },
+
+    "flashggTHQHadronicTag" :
+    {
+        "btagDeepCSV" : [ 0.1355, 0.4506, 0.7738 ],
+        "jetID" : "UL1718"
+    },
+
     "flashggVBFMVA" : 
     {  
         "weightFile" : "flashgg/Taggers/data/STXSmodels/vbfDataDriven_IncUL2017.xml",
@@ -225,7 +237,9 @@
 
 	"bTagEffBins" : "bTagEffBins2017",
 
-	"bTagger" : "pfDeepJet",
+	"bTagger" : "pfDeepCSV",
+
+    "isNewCSVFormat" : true,
 
     "isNewCSVFormat" : true,
 
