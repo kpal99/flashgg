@@ -44,14 +44,15 @@ class StageOneCustomize():
             ["RECO_TTH_LEP_PTH_120_200_Tag0",0], ["RECO_TTH_LEP_PTH_120_200_Tag1",0],
             ["RECO_TTH_LEP_PTH_200_300_Tag0",0],
             ["RECO_TTH_LEP_PTH_GT300_Tag0",0],
-            ["RECO_THQ_LEP",0]
+            ["RECO_THQ_LEP",0], ["RECO_THQ_HAD",0]
         ]
         if self.customize.processId == "Data": 
             self.tagList.pop(1) ## remove NoTag for data
         self.stageOneVariable = ["stage1p2bin[57,-8.5,48.5] := tagTruth().HTXSstage1p2orderedBin"]
         self.tagPriorityRanges = cms.VPSet(
 	          cms.PSet(TagName = cms.InputTag('flashggTHQLeptonicTag')),
-            cms.PSet(TagName = cms.InputTag('flashggTTHLeptonicTag')), 
+	        cms.PSet(TagName = cms.InputTag('flashggTHQHadronicTag')),
+            cms.PSet(TagName = cms.InputTag('flashggTTHLeptonicTag')),
             cms.PSet(TagName = cms.InputTag('flashggZHLeptonicTag')),
             cms.PSet(TagName = cms.InputTag('flashggWHLeptonicTag')),
             cms.PSet(TagName = cms.InputTag('flashggTTHHadronicTag')),   
@@ -115,6 +116,7 @@ class StageOneCustomize():
         ## remove unneeded tags
         self.process.flashggTagSequence.remove(self.process.flashggVBFDiPhoDiJetMVA)
         #self.process.flashggTagSequence.remove(self.process.flashggTHQLeptonicTag) ## now included in analysis
+        #self.process.flashggTagSequence.remove(self.process.flashggTHQHadronicTag) ## now included in analysis
         self.process.flashggTagSequence.remove(self.process.flashggTTHDiLeptonTag)
         self.process.flashggTagSequence.remove(self.process.flashggTTHLeptonicTag) ## will be added back in later
         self.process.flashggTagSequence.remove(self.process.flashggTTHHadronicTag) ## will be added back in later
@@ -164,6 +166,7 @@ class StageOneCustomize():
             self.process.p.replace(self.process.flashggSystTagMerger, getattr(self.process, 'flashggTagSorter' + systlabel) * self.process.flashggSystTagMerger)
             modifiedPriorityRanges = cms.VPSet(
 	              cms.PSet(TagName = cms.InputTag('flashggTHQLeptonicTag'+systlabel)),
+	            cms.PSet(TagName = cms.InputTag('flashggTHQHadronicTag'+systlabel)),
                 cms.PSet(TagName = cms.InputTag('flashggTTHLeptonicTag', systlabel)),
                 cms.PSet(TagName = cms.InputTag('flashggZHLeptonicTag'+systlabel)),
                 cms.PSet(TagName = cms.InputTag('flashggWHLeptonicTag'+systlabel)),
