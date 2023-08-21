@@ -449,9 +449,9 @@ else:
     variablesToUse = minimalVariables + minimalVariablesHTXS + var.dipho_variables + var.vtx_variables + var.vtx_truth_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable + var.thqSystematicVariables + var.gen_met
 
 
-if customize.processId == "tHq":
-    import flashgg.Taggers.THQLeptonicTagVariables as var
-    variablesToUse = minimalVariables + var.vtx_variables + var.dipho_variables
+#if customize.processId == "tHq":
+#    import flashgg.Taggers.THQLeptonicTagVariables as var
+#    variablesToUse = minimalVariables + var.vtx_variables + var.dipho_variables
 
 #tagList=[
 #["UntaggedTag",4],
