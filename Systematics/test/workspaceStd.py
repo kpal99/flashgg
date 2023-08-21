@@ -441,6 +441,14 @@ process.extraDumpers = cms.Sequence()
 from flashgg.Taggers.TagsDumperCustomize import customizeTagsDumper
 customizeTagsDumper(process, customize) ## move all the default tags dumper configuration to this function
 
+
+import flashgg.Taggers.THQLeptonicTagVariables as var
+if customize.processId.count("Data"):
+    variablesToUse = minimalNonSignalVariables + var.vtx_variables + var.dipho_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable
+else:
+    variablesToUse = minimalVariables + minimalVariablesHTXS + var.dipho_variables + var.vtx_variables + var.vtx_truth_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable + var.thqSystematicVariables + var.gen_met
+
+
 if customize.processId == "tHq":
     import flashgg.Taggers.THQLeptonicTagVariables as var
     variablesToUse = minimalVariables + var.vtx_variables + var.dipho_variables
