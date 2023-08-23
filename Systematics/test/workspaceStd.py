@@ -442,16 +442,12 @@ from flashgg.Taggers.TagsDumperCustomize import customizeTagsDumper
 customizeTagsDumper(process, customize) ## move all the default tags dumper configuration to this function
 
 
-import flashgg.Taggers.THQLeptonicTagVariables as var
-if customize.processId.count("Data"):
-    variablesToUse = minimalNonSignalVariables + var.vtx_variables + var.dipho_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable
-else:
-    variablesToUse = var.dipho_variables
-
-
-#if customize.processId == "tHq":
-#    import flashgg.Taggers.THQLeptonicTagVariables as var
-#    variablesToUse = minimalVariables + var.vtx_variables + var.dipho_variables
+if "thq" in customize.processId.lower():
+    import flashgg.Taggers.THQLeptonicTagVariables as var
+    if customize.processId.count("Data"):
+        variablesToUse = minimalNonSignalVariables + var.vtx_variables + var.dipho_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable
+    else:
+        variablesToUse = var.dipho_variables
 
 #tagList=[
 #["UntaggedTag",4],
