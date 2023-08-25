@@ -447,7 +447,9 @@ if "thq" in customize.processId.lower():
     if customize.processId.count("Data"):
         variablesToUse = minimalNonSignalVariables + var.vtx_variables + var.dipho_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable
     else:
-        variablesToUse = var.dipho_variables
+        variablesToUse = minimalVariables + var.dipho_variables + var.vtx_variables + var.vtx_truth_variables + var.photon_variables + var.lepton_variables +  var.thqmva_variables +  var.thqSystematicVariables + var.dr_variable
+        # jet_variables, var.gen_met, var.minimalVariablesHTXS NOT working
+        #variablesToUse = minimalVariables + minimalVariablesHTXS + var.dipho_variables + var.vtx_variables + var.vtx_truth_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable + var.thqSystematicVariables + var.gen_met
 
 #tagList=[
 #["UntaggedTag",4],
