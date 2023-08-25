@@ -447,7 +447,7 @@ if "thq" in customize.processId.lower():
     if customize.processId.count("Data"):
         variablesToUse = minimalNonSignalVariables + var.vtx_variables + var.dipho_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable
     else:
-        variablesToUse = minimalVariables + var.dipho_variables + var.vtx_variables + var.vtx_truth_variables + var.photon_variables + var.lepton_variables +  var.thqmva_variables +  var.thqSystematicVariables + var.dr_variable
+        variablesToUse = minimalVariables + var.dipho_variables + var.vtx_variables + var.vtx_truth_variables + var.photon_variables + var.lepton_variables +  var.thqmva_variables +  var.thqSystematicVariables + var.dr_variable + var.jet_variables
         # jet_variables, var.gen_met, var.minimalVariablesHTXS NOT working
         #variablesToUse = minimalVariables + minimalVariablesHTXS + var.dipho_variables + var.vtx_variables + var.vtx_truth_variables + var.photon_variables + var.lepton_variables + var.jet_variables + var.thqmva_variables + var.dr_variable + var.thqSystematicVariables + var.gen_met
 
