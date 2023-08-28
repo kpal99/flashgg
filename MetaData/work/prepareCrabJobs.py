@@ -267,6 +267,7 @@ if options.createCrabConfig:
         replacements = [
             ("backup_", ""),
             ("RunIISummer16MiniAODv2-PUMoriond17_qcut19_80X_mcRun2_asymptotic_2016","Moriond17"),
+            ("TprimeBToTH_LH","Tp"),
             ("TuneCUEP8M1_13TeV-pythia8","13TeV"),
             ("TuneCUETP8M1_13TeV-madgraphMLM-pythia8","13TeV-mg"),
             ("TuneCUETP8M1_13TeV_Pythia8","13TeV-p8"),
