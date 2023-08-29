@@ -352,7 +352,7 @@ if options.createCrabConfig:
                         "UNITSPERJOB"     : str(options.unitsPerJob),
                         "FLASHGG_VERSION" : "%s-%s-v%d" % (options.campaign,flashggVersion, itry),
                         "PROCESSED_DSET"  : label,
-                        "SPLITTING"       : "EventAwareLumiBased",
+                        "SPLITTING"       : "FileBased",
                         "OUTLFN"          : "%s/%s/%s" % (options.outputPath,options.campaign,flashggVersion),
                         "OUTSITE"         : options.outputSite,
                         "PYCFG_PARAMS"    : [str("datasetName=%s" % sample)]
