@@ -441,5 +441,6 @@
     "WW_TuneCP5_13TeV-pythia8"                                             : { "xs" : 75.8   },
     "WZ_TuneCP5_13TeV-pythia8"                                             : { "xs" : 27.6   },
     "TprimeBToTH_LH"                                                       : { "xs" : 0.103  },
+    "TprimeBToTH_LH_pr"                                                    : { "xs" : 1.0  },
     "ZZ_TuneCP5_13TeV-pythia8"                                             : { "xs" : 12.14  }
 }
