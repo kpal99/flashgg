@@ -1089,6 +1089,8 @@ Commands:
             if not self.options.verbose and len(sec) > maxSec and catalog[d]['dset_type'] == "data":
                 sec = sec[sec.find("Run201"):sec.find("Run201")+8]
                 slim_datasets.append("/%s/..%s.." % ( prim, sec ) )
+            elif "TprimeBToTH_LH_M" in sec and "MICROAOD" in sec and "MICROAOD" in sec:
+                slim_datasets.append("/%s/%s" % (prim, sec.split("_MICROAOD")[0] ) )
             else:
                 slim_datasets.append("/%s" % prim )
         ## datasets = slim_datasets
