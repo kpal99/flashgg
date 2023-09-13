@@ -1234,6 +1234,7 @@ void THQLeptonicTagProducer::produce( Event &evt, const EventSetup & )
 
 //cout<<"MVAscore_tHqVsttHBDT=           "<< MVAscore_tHqVsttHBDT<<endl;
 
+    use_MVAs_ = false;
     if(use_MVAs_){
         if(use_tHVsNonHiggsBDT_){
             if( MVAscore_tHqVsNonHiggsBkg < MVAThreshold_tHqVsNonHiggsBkg_){

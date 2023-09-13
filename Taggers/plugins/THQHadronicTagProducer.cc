@@ -859,6 +859,7 @@ void THQHadronicTagProducer::produce( Event &evt, const EventSetup & )
         mva_value_smh = tprimeTagger_smh->convert_tmva_to_prob(raw_score_smh);
 
         // to be enabled when producing WS (events in SRs)
+        use_MVAs_ = false;
         if(use_MVAs_) {
             bool print_jet_info = false;
             if(print_jet_info) tprimeTagger_nrb->print_details_jets( MyCheckVarList );
