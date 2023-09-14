@@ -58974,7 +58974,7 @@
         "vetted": true
     }, 
     "/TTGJets_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/lata-Era2018_legacy_v1-v1_p2-v0-RunIISummer20UL18MiniAODv2-106X_upgrade2018_realistic_v16_L1v1-v1-09a907750fba2d34e04c07dbff1d88d6/USER": {
-        "dset_type": null, 
+        "dset_type": "mc", 
         "files": [
             {
                 "bad": false, 
