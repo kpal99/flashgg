@@ -122,6 +122,8 @@ private:
     double DeltaRbjetfwdjet_;
     double DeltaRtHchainfwdjet_;
 
+    float fwdJet1_discr_;
+
     bool hasGoodElec = false;
     bool hasVetoElec = false;
     bool hasGoodMuons = false;
@@ -512,6 +514,7 @@ void THQHadronicTagProducer::produce( Event &evt, const EventSetup & )
         std::vector<edm::Ptr<flashgg::Jet> > forwardjet;
 	    std::vector<float> bDiscr_bjets;
         std::vector<float> bDiscr_fwdjets;
+
         for( unsigned int candIndex_outer = 0; candIndex_outer < Jets[jetCollectionIndex]->size() ; candIndex_outer++ ) {
             edm::Ptr<flashgg::Jet> thejet = Jets[jetCollectionIndex]->ptrAt( candIndex_outer );
 
@@ -575,11 +578,14 @@ void THQHadronicTagProducer::produce( Event &evt, const EventSetup & )
 
         std::vector<float> bDeepCSV_jets, bDeepJet_jets;
         std::vector<TLorentzVector> jets;
+        fwdJet1_discr_=-999;
         for(unsigned int jetsindex = 0 ; jetsindex < SelJetVect_PtSorted.size(); jetsindex++){
             edm::Ptr<flashgg::Jet> obj = SelJetVect_PtSorted[jetsindex];
 
 	        bDeepCSV_jets.push_back( obj->bDiscriminator("pfDeepCSVJetTags:probb") + obj->bDiscriminator("pfDeepCSVJetTags:probbb") );
             bDeepJet_jets.push_back( obj->bDiscriminator("mini_pfDeepFlavourJetTags:probb")+obj->bDiscriminator("mini_pfDeepFlavourJetTags:probbb")+obj->bDiscriminator("mini_pfDeepFlavourJetTags:problepb") );
+            fwdJet1_discr_= SelJetVect_EtaSorted[0]->bDiscriminator("pfDeepCSVJetTags:probb") + SelJetVect_EtaSorted[0]->bDiscriminator("pfDeepCSVJetTags:probbb");
+            bDiscr_fwdjets.push_back(fwdJet1_discr_ );
 
             TLorentzVector jet;
             jet.SetPtEtaPhiE(SelJetVect_PtSorted[jetsindex]->pt(), SelJetVect_PtSorted[jetsindex]->eta(), SelJetVect_PtSorted[jetsindex]->phi(), SelJetVect_PtSorted[jetsindex]->energy());
@@ -922,7 +928,7 @@ void THQHadronicTagProducer::produce( Event &evt, const EventSetup & )
             thqhtags_obj.setforwardjet( forwardjet );
 
             thqhtags_obj.setmvaresult ( mvares->result ) ;     //diphoton mva
-		    thqhtags_obj.setbDiscriminatorValue( bDeepCSV_jets, bDeepJet_jets );
+		    thqhtags_obj.setbDiscriminatorValue( bDeepCSV_jets, bDeepJet_jets , bDiscr_fwdjets );
 		    //thqhtags_obj.setbDiscriminatorValue( bDiscr_bjets, bDeepCSV_jets, bDiscr_fwdjets );
 
 

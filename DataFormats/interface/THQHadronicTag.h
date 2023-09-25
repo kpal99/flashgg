@@ -53,6 +53,7 @@ namespace flashgg {
         const std::vector<double > get_mom_mass() const { return mom_mass_;}
         const std::vector<edm::Ptr<Jet> > centralJet() const { return CentralJet_ ;}
         const std::vector<edm::Ptr<Jet> > forwardJet() const { return ForwardJet_ ;}
+        const std::vector<float> bDiscriminatorValue_fwdjets() const{ return bDiscriminatorValue_fwdjets_; }
 
         //DeltaRhis between leptons and MET
         float dPhi_Muon1_MET() const  { 
@@ -579,11 +580,11 @@ namespace flashgg {
         void setMVAscore_ttHvstHDNN( float MVAscore_ttHvstHDNN ){
             MVAscore_ttHvstHDNN_ = MVAscore_ttHvstHDNN;
         }
-        void setbDiscriminatorValue( std::vector<float> bDeepCSV_jets, std::vector<float> bDeepJet_jets ){
+        void setbDiscriminatorValue( std::vector<float> bDeepCSV_jets, std::vector<float> bDeepJet_jets, std::vector<float> bDiscriminatorValue_fwdjets ){
             bDeepCSV_jets_ = bDeepCSV_jets;
             bDeepJet_jets_ = bDeepJet_jets;
+            bDiscriminatorValue_fwdjets_ = bDiscriminatorValue_fwdjets;
         }
-      
 //
         int nMedium_bJets, nLoose_bJets, nTight_bJets, nCentralJets , nForwardJets;
         double bTagWeight, bTagWeightUp, bTagWeightDown;
@@ -689,6 +690,7 @@ namespace flashgg {
         float thq_mvaresult_ForNonPeakingBkg_;
         float MVAscore_ttHvstHDNN_;
         double likelihood_result_;
+        std::vector<float> bDiscriminatorValue_fwdjets_;
         std::vector<float> bDeepCSV_jets_;
         std::vector<float> bDeepJet_jets_;
         float dRmyfunval_;
