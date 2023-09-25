@@ -294,11 +294,11 @@ jet_variables=[
 #    'jet2_discr := ?jets.size>1? bDiscriminatorValue_jets.at(1) : -999',
 #    'jet3_discr := ?jets.size>2? bDiscriminatorValue_jets.at(2) : -999',
 
-#    "recoMET_pt             :=getRECOMET().getCorPt()",
+    "recoMET_pt             :=getRECOMET().getCorPt()",
 #    "recoMET_eta            :=getRECOMET().eta()",
 #    "recoMET_phi            :=getRECOMET().getCorPhi()",
 #    "recoMET_e              :=getRECOMET().energy()",
-#    "solvedMET_pt           :=getMET_Pt(\"SolvedMET\")",
+    "solvedMET_pt           :=getMET_Pt(\"SolvedMET\")",
 #    "solvedMET_eta          :=getMET_Eta(\"SolvedMET\")",
 #    "solvedMET_phi          :=getMET_Phi(\"SolvedMET\")",
 #    "solvedMET_e            :=getMET_E(\"SolvedMET\")",
