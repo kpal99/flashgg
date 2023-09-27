@@ -43,8 +43,10 @@ def main(args):
         LHE_Branch_Name = args[5]
 
         events.GetEntry(0)
-        weightNames = getattr( events , LHE_Branch_Name ).weights()
-        #weightNames = events.LHEEventProduct_source__LHEFile.weights()
+        try:
+            weightNames = getattr( events , LHE_Branch_Name ).weights()
+        except:
+            weightNames = events.LHEEventProduct_source__LHEFile.weights()
         for i in range(0, weightNames.size() ):
             if weightNames[i].id in weights_to_include_names :
                 weights_included[i] = [ weightNames[i].id , 0.0 ]
