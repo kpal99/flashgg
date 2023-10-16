@@ -7314,7 +7314,6 @@
         "parent_n_units": 400000,
         "vetted": true
     },
-=======
     "/TprimeBToTH_Hgg_M-1500_LH_TuneCP5_PSweights_13TeV-madgraph_pythia8/lata-Era2017_legacy_v1-v1_p1-v0-RunIISummer20UL17MiniAOD-106X_mc2017_realistic_v6-v2-59721402629b4b4fae2a29dd9bb0dfe1/USER": {
         "dset_type": "mc",
         "files": [
