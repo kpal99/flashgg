@@ -564,7 +564,7 @@ filterHLTrigger(process, customize)
 process.options = cms.untracked.PSet( wantSummary = cms.untracked.bool(True) )
 
 process.dataRequirements = cms.Sequence()
-if customize.processId == "Data":
+if "data" in customize.processId.lower():
         process.dataRequirements += process.hltHighLevel
 
 # Split WH and ZH
