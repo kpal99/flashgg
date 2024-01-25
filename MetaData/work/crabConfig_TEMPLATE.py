@@ -24,7 +24,7 @@ config.JobType.maxJobRuntimeMin = 120
 #config.JobType.maxMemoryMB = 2500 # For memory leaks. NB. will block jobs on many sites
 ## config.JobType.scriptExe = "cmsWrapper.sh"
 config.JobType.pyCfgParams = PYCFG_PARAMS
-config.JobType.sendPythonFolder = True
+# config.JobType.sendPythonFolder = True
 config.JobType.sendExternalFolder = True
 
 config.section_("Data")
@@ -40,6 +40,6 @@ config.Data.outLFNDirBase = "OUTLFN"
 
 config.section_("Site")
 config.Site.storageSite = "OUTSITE"
-config.Site.blacklist = ["T2_US_Nebraska"]
+# config.Site.blacklist = ["T2_US_Nebraska"]
 #config.Site.blacklist = ["T2_UK_London_Brunel","T1_US_FNAL","T2_US_MIT"]
 

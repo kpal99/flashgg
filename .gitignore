@@ -1,4 +1,8 @@
 # Editors temp files
+*.err
+*.out
+*.sub
+job*.sh
 *.swp
 *~
 
@@ -28,6 +32,14 @@ AutoDict_*
 
 # This is a symlink created by setup.sh
 DataFormats/src/classes_def.xml
-
-.gitignore
-**/.archives_txt
+.__afs644E
+CreateCatalogue.sh
+grep.py
+MyNotes.md
+QGL_AK4chs_94X.db
+rasharma.cc
+test.C
+Era2018_legacy_v1_Summer20UL_backup/
+work/
+data/
+classes_def.xml.generated
