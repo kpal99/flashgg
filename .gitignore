@@ -1,18 +1,25 @@
-# Editors temp files
-*.err
-*.out
-*.sub
+# This is a symlink created by setup.sh
+DataFormats/src/classes_def.xml
+QGL_AK4chs_94X.db
 job*.sh
-*.swp
-*~
 
-# SCRAM business
-__init__.py
-*.pyc
+**/untracked/
+**/archive/
+**/.archives_txt/
 
-# CRAB3 stuff
-crab_*
-crabConfig_*
+# Orig files before modifying them, there were tracked by git so :shrug:
+*.Orig
+
+# Other temp files
+*.log
+*.out
+*.tmp
+*.pcm
+*.o
+*.err
+
+# pdf not included unless specified so
+*.pdf
 
 # ROOT-related files
 *.root
@@ -24,22 +31,40 @@ crabConfig_*
 .\#*
 AutoDict_*
 
-# Other temp files
-*.txt
-*.log
-*.png
-*.pdf
+# SCRAM business
+__init__.py
+*.pyc
+__pycache__/
+.__afs*
+# CRAB3 stuff
+crab_*
+crabConfig_*
 
-# This is a symlink created by setup.sh
-DataFormats/src/classes_def.xml
-.__afs644E
-CreateCatalogue.sh
-grep.py
-MyNotes.md
-QGL_AK4chs_94X.db
-rasharma.cc
-test.C
-Era2018_legacy_v1_Summer20UL_backup/
-work/
-data/
-classes_def.xml.generated
+# MacOS and windows related files
+.DS_Store
+Thumbs.db
+
+#vim realted ignores
+#stole from :)
+#https://github.com/github/gitignore/blob/main/Global/Vim.gitignore
+#
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+
+# Auto-generated tag files
+tags
+
+# Persistent undo
+[._]*.un~
