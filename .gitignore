@@ -1,7 +1,9 @@
+# Project related ignores
 # This is a symlink created by setup.sh
 DataFormats/src/classes_def.xml
 QGL_AK4chs_94X.db
 job*.sh
+log*/
 
 **/untracked/
 **/archive/
